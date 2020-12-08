@@ -26,6 +26,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_ROOT = os.path.join(BASE_DIR, 'site')
 
 urlpatterns = [
+    path('accounts/', include('django.contrib.auth.urls')),  # Add
+    path('autos/', include('autos.urls')),                   # Add
     path('', TemplateView.as_view(template_name='home/main.html')),
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
