@@ -61,16 +61,16 @@ class MakeCreate(LoginRequiredMixin, CreateView):
     # is on make_list.html
     model = Make
     fields = '__all__'
-    success_url = reverse_lazy('make:all')
+    success_url = reverse_lazy('autos:all')
 
 
 class MakeUpdate(LoginRequiredMixin, UpdateView):
     model = Make
     fields = '__all__'
-    success_url = reverse_lazy('make:all')
+    success_url = reverse_lazy('autos:all')
 
 
 class MakeDelete(LoginRequiredMixin, DeleteView):
     model = Make
     fields = '__all__'
-    success_url = reverse_lazy('make:all')
+    success_url = reverse_lazy('autos:all')
