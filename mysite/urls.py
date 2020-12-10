@@ -28,6 +28,7 @@ SITE_ROOT = os.path.join(BASE_DIR, 'site')
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),  # Add
     path('autos/', include('autos.urls')),                   # Add
+    path('cats/', include('cats.urls')),
     path('', TemplateView.as_view(template_name='home/main.html')),
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
