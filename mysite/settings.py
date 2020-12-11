@@ -36,13 +36,23 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'hello.apps.HelloConfig',
     'polls.apps.PollsConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Extensions - installed with pip3 / requirements.txt
+    'django_extensions',
+    'crispy_forms',
+    'rest_framework',
+    'social_django',
 ]
+
+# When we get to crispy forms :)
+CRISPY_TEMPLATE_PACK = 'bootstrap3'  # Add
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
