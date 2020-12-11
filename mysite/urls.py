@@ -15,10 +15,12 @@ Including another URLconf
 """
 import os
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
+from django.conf import settings
 from django.conf.urls import url
+from django.contrib.auth import views as auth_views
 from django.views.static import serve
-from django.views.generic import TemplateView
+
 
 # Up two folders to serve "site" content
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,7 +37,7 @@ urlpatterns = [
     path('cats/', include('cats.urls')),
     path('ads/', include('ads.urls')),
 
-    #path('', TemplateView.as_view(template_name='home/main.html')),
+    # path('', TemplateView.as_view(template_name='home/main.html')),
 
     path('polls/', include('polls.urls')),
     path('hello/', include('hello.urls')),
@@ -64,7 +66,7 @@ try:
                        )
     print('Using', social_login, 'as the login template')
 except:
-    print('Using registration/login.html as the login template')
+    print('No Using registration/login.html as the login template')
 
 # References
 
