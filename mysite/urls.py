@@ -26,12 +26,14 @@ SITE_ROOT = os.path.join(BASE_DIR, 'site')
 
 urlpatterns = [
     path('', include('home.urls')),  # Change to ads.urls
+
     path('admin/', admin.site.urls),  # Keep
     path('accounts/', include('django.contrib.auth.urls')),  # Keep
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # Keep
 
     path('autos/', include('autos.urls')),  # Add
     path('cats/', include('cats.urls')),
+    path('ads/', include('ads.urls')),
 
     #path('', TemplateView.as_view(template_name='home/main.html')),
 
