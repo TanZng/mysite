@@ -1,5 +1,5 @@
-<html>
-<head>
+{% extends "base_bootstrap.html" %}
+{% block content %}
     <title>{{ settings.APP_NAME }}</title>
 </head>
 <h1>Hello! Welcome to my site</h1>
@@ -12,5 +12,4 @@
     <li><p><a href="/admin">Admin Login</a></p></li>
     <li><p><a href="/site">Site directory</a></p></li>
 </ul>
-</body>
-</html>
+{% endblock %}
